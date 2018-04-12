@@ -4,6 +4,16 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
+import firebase from 'firebase';
+
+var config = {
+  apiKey: "AIzaSyCQLwasWC29rvAwySjErchqIdNo3_9oz3w",
+  authDomain: "chat-e08dd.firebaseapp.com",
+  databaseURL: "https://chat-e08dd.firebaseio.com",
+  projectId: "chat-e08dd",
+  storageBucket: "chat-e08dd.appspot.com",
+  messagingSenderId: "1076859887383"
+};
 @Component({
   templateUrl: 'app.html'
 })
@@ -17,6 +27,7 @@ export class MyApp {
       statusBar.styleDefault();
       splashScreen.hide();
     });
+    firebase.initializeApp(config);
   }
 }
 

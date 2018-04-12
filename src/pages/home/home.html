@@ -1,14 +1,23 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Chat App
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  
+<ion-card *ngIf="chatUser">
+
+<button ion-button block (click)="logout()">LOGOUT</button>
+<br>
+<ion-card-header>{{chatUser.email}}</ion-card-header>
+<ion-card-content>
+  <p>Welcome to our chat application </p>
+</ion-card-content>
+</ion-card>
+<button ion-button block (click)="login()" *ngIf="!chatUser">login with google</button>
+
+
 </ion-content>
