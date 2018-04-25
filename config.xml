@@ -85,7 +85,7 @@
         <host name="https://p8kyr.app.goo.gl/6SuK" scheme="https" />
         <host name="chat-e08dd.firebaseapp.com" scheme="https">
             <path url="/_/auth/callback" />
-        </host>
+        </host> 
     </universal-links>
     <plugin name="cordova-plugin-buildinfo" spec="^2.0.1" />
     <plugin name="cordova-universal-links-plugin" spec="^1.2.1" />

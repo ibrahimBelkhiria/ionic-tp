@@ -1,0 +1,16 @@
+<ion-grid class="messages-container">
+  <ion-row class="message" *ngFor="let message of messages">
+    <ion-col col-2 text-right>
+      <img [src]="message.user.photUrl" class="img"/>
+    </ion-col>
+    <ion-col col-10>
+      <div>
+        <span class="user-name">{{message.user.displayName}}</span>
+        <span class="name-suffix">&nbsp;à dit :</span>
+      </div>
+      <div style="padding-top: 0.5em;">
+        <span class="text">{{message.text}}</span>
+      </div>
+    </ion-col>
+  </ion-row>
+</ion-grid>

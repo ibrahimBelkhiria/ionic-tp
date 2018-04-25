@@ -7,7 +7,7 @@
 </ion-header>
 
 <ion-content padding>
-  
+
 <ion-card *ngIf="chatUser">
 
 <button ion-button block (click)="logout()">LOGOUT</button>
@@ -15,6 +15,18 @@
 <ion-card-header>{{chatUser.email}}</ion-card-header>
 <ion-card-content>
   <p>Welcome to our chat application </p>
+    <message-box></message-box>
+
+
+
+  <form>
+
+    <input type="text" name="message" [(ngModel)]="messageText" placeholder="write some message ..." >
+    <input type="submit" class="btn btn-primary" (click)="sendMessage()">
+
+
+  </form>
+
 </ion-card-content>
 </ion-card>
 <button ion-button block (click)="login()" *ngIf="!chatUser">login with google</button>
